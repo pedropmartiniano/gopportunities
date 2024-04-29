@@ -4,10 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Initialize() {
-	r := gin.Default()
-
-	initializeRoutes(r)
-
-	r.Run(":8081")
+func Initialize(router *gin.Engine) {
+	initializeRoutes(router)
 }
